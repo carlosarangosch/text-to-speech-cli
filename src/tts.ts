@@ -18,7 +18,7 @@ export async function textToSpeech(inputFilePath: string, languageCode:string, v
     const text = await fs.readFile(inputFilePath, "utf8")
 
     const request: protos.google.cloud.texttospeech.v1.ISynthesizeSpeechRequest = {
-      input: { text: text },
+      input: { ssml: text },
       voice: {
         languageCode: languageCode,
         name: voiceName,
@@ -33,7 +33,7 @@ export async function textToSpeech(inputFilePath: string, languageCode:string, v
     }
 
     const inputFileName = path.basename(inputFilePath, ".txt")
-    const outputFilePath = `./generated/${inputFileName}_output.mp3`
+    const outputFilePath = `./generated/${Date.now()}_${inputFileName}_output.mp3`
 
     await fs.writeFile(outputFilePath, response.audioContent)
     logger.success(`Audio content written to file: ${outputFilePath}`)
