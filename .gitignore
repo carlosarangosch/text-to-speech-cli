@@ -1,0 +1,15 @@
+node_modules
+dist
+.env
+
+# Ignore everything in the credentials folder
+credentials/*
+
+# But don't ignore the .gitkeep file
+!credentials/.gitkeep
+
+# Ignore everything in the generated folder
+generated/*
+
+# But don't ignore the .gitkeep file
+!generated/.gitkeep

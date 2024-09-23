@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES2023", // Utiliza las características de ES2023
+    "module": "NodeNext", // Usa módulos ESNext
+    "moduleResolution": "NodeNext", // Resuelve módulos como en Node.js
+    "esModuleInterop": true, // Interoperabilidad entre CommonJS y ES Modules
+    "allowSyntheticDefaultImports": true, // Importaciones con valor por defecto
+    "skipLibCheck": true, // Omitir la verificación de tipos en bibliotecas
+    "forceConsistentCasingInFileNames": true, // Forzar consistencia en mayúsculas y minúsculas
+    "strict": true, // Activa todas las verificaciones estrictas
+    "outDir": "./dist", // Directorio de salida
+    "isolatedModules": true, // Asegura que cada archivo se trate como un módulo independiente
+  },
+  "include": ["src/**/*"], // Incluir todos los archivos en src
+  "exclude": ["node_modules"] // Excluir las dependencias
+}
